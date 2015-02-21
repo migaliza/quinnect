@@ -11,4 +11,10 @@ package quinnectModels;
  */
 public class Models {
     
+    
+    
+    
+    public Models(){
+    }
+    
 }

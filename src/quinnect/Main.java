@@ -5,6 +5,11 @@
  */
 package quinnect;
 
+import quinnectControllers.WidgetAnimations;
+import quinnectControllers.WidgetController;
+import quinnectModels.Models;
+import quinnectViews.Widget;
+
 /**
  *
  * @author Prophet
@@ -16,6 +21,12 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Widget w = new Widget();
+        Models m = new Models();
+        WidgetAnimations wa = new WidgetAnimations(w);
+        WidgetController wc = new WidgetController(w,m);
+        
+        
     }
     
 }
