@@ -32,7 +32,7 @@
     <Component class="javax.swing.JLabel" name="bottomIcon">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/quinnectViews/icons/youtube_small.png"/>
+          <Image iconType="3" name="/quinnectViews/icons/youtube_small - transparent.png"/>
         </Property>
       </Properties>
       <Events>
@@ -48,7 +48,7 @@
     <Component class="javax.swing.JLabel" name="topIcon">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/quinnectViews/icons/twitter_small.png"/>
+          <Image iconType="3" name="/quinnectViews/icons/twitter_small - transparent.png"/>
         </Property>
       </Properties>
       <Events>
@@ -74,6 +74,13 @@
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="290" y="190" width="-1" height="80"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="javax.swing.JTextField" name="searchField">
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="70" y="219" width="240" height="30"/>
         </Constraint>
       </Constraints>
     </Component>

@@ -16,17 +16,20 @@ public class SocialMedia {
     
     /* method to post a tweet from the widget*/
     public String post_tweet(){
-        
+        String string = null;
+        return string;
     }
     
     /*methid to diplay notifications*/
     public String display_notification(String note){
-        
+        String string = null;
+        return string;        
     }
     
     /*method to fetch credentials*/
     public String fetch_credentials(){
-        
+        String string = null;
+        return string;        
     }
     
 }

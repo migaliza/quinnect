@@ -6,6 +6,7 @@
 package quinnectViews;
 
 import javax.swing.JLabel;
+import javax.swing.JTextField;
 
 /**
  *
@@ -41,6 +42,10 @@ public class Widget extends javax.swing.JFrame {
         return currPosnY;
     }
     
+    public JTextField getSearchField(){
+        return searchField;
+    }
+    
     int xMouse, yMouse;
     static int currPosnX,currPosnY;
     /**
@@ -55,12 +60,13 @@ public class Widget extends javax.swing.JFrame {
         bottomIcon = new javax.swing.JLabel();
         topIcon = new javax.swing.JLabel();
         mainIcon = new javax.swing.JLabel();
+        searchField = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setAlwaysOnTop(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        bottomIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/quinnectViews/icons/youtube_small.png"))); // NOI18N
+        bottomIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/quinnectViews/icons/youtube_small - transparent.png"))); // NOI18N
         bottomIcon.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
                 bottomIconMouseDragged(evt);
@@ -73,7 +79,7 @@ public class Widget extends javax.swing.JFrame {
         });
         getContentPane().add(bottomIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 250, -1, 50));
 
-        topIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/quinnectViews/icons/twitter_small.png"))); // NOI18N
+        topIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/quinnectViews/icons/twitter_small - transparent.png"))); // NOI18N
         topIcon.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
                 topIconMouseDragged(evt);
@@ -98,6 +104,7 @@ public class Widget extends javax.swing.JFrame {
             }
         });
         getContentPane().add(mainIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 190, -1, 80));
+        getContentPane().add(searchField, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 219, 240, 30));
 
         setBounds(800, 800, 416, 339);
     }// </editor-fold>//GEN-END:initComponents
@@ -187,6 +194,7 @@ public class Widget extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel bottomIcon;
     private javax.swing.JLabel mainIcon;
+    private javax.swing.JTextField searchField;
     private javax.swing.JLabel topIcon;
     // End of variables declaration//GEN-END:variables
 }
