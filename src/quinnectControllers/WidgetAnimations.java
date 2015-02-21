@@ -34,8 +34,9 @@ public class WidgetAnimations {
     private void control() {
         w.dispose();
         w.setUndecorated(true);
-        w.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
-        displayInCorner();
+        w.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));  
+        iconTransparency();
+        displayInCorner();        
         makeMovable();
     }
     
@@ -48,8 +49,8 @@ public class WidgetAnimations {
         Rectangle rect = defaultScreen.getDefaultConfiguration().getBounds();
         int x = (int) rect.getMaxX() - w.getWidth();
         int y = (int) rect.getMaxY() - w.getHeight();
-        w.setLocation(x, y);
-        w.setVisible(true);
+        w.setLocation(x, y);        
+        w.setVisible(true);        
     }
     
     /**
@@ -62,7 +63,11 @@ public class WidgetAnimations {
              public void mouseDragged(MouseEvent e) {
                  if(e.getSource()==w.getMain()){
                      w.setLocation(w.xPos(),w.yPos());
-                 }
+                 } else if(e.getSource()==w.getTop()){
+                     w.setLocation(w.xPos(),w.yPos());
+                 } else if(e.getSource()==w.getBottom()){
+                     w.setLocation(w.xPos(),w.yPos());
+                 }     
              }
 
              @Override
@@ -72,6 +77,13 @@ public class WidgetAnimations {
          };
          
          w.getMain().addMouseMotionListener(mouseMotionListener);
+    }
+    
+    private void iconTransparency(){
+        
+        w.getTop().setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
+        w.getMain().setBackground(new Color(1.0f, 1.0f, 1.0f, 0.5f));
+        w.getBottom().setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
     }
 
 }
