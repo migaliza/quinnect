@@ -34,6 +34,8 @@ public class WidgetAnimations {
     String currTransparentBigTopUrl = "../quinnectViews/icons/twitter_big_transparent.png";
     String currTransparentBigMainUrl = "../quinnectViews/icons/google_big_transparent.png";
     String currTransparentBigBottomUrl = "../quinnectViews/icons/youtube_big_transparent.png";
+    
+    String currTextBoard = "../quinnectViews/icons/google_board.png";
 
     String mode = "";
     private int count = 0;
@@ -103,6 +105,7 @@ public class WidgetAnimations {
     private void iconTransparency() {
         w.getTop().setVisible(false);
         w.getMain().setIcon(new javax.swing.ImageIcon(getClass().getResource(currTransparentBigMainUrl)));
+        w.getTextBoard().setIcon(new javax.swing.ImageIcon(getClass().getResource(currTextBoard)));
         w.getBottom().setVisible(false);
         mouselistener = new MouseListener() {
 
@@ -158,6 +161,8 @@ public class WidgetAnimations {
                 }
                 w.getTop().setIcon(new javax.swing.ImageIcon(getClass().getResource(currTopUrl)));
                 w.getBottom().setIcon(new javax.swing.ImageIcon(getClass().getResource(currBottomUrl)));
+                w.getTextBoard().setIcon(new javax.swing.ImageIcon(getClass().getResource(currTextBoard)));
+                
             }
 
             @Override
@@ -207,6 +212,9 @@ public class WidgetAnimations {
             currTransparentBigTopUrl = "../quinnectViews/icons/youtube_big_transparent.png";
             currTransparentBigMainUrl = "../quinnectViews/icons/twitter_big_transparent.png";
             currTransparentBigBottomUrl = "../quinnectViews/icons/google_big_transparent.png";
+            
+            /* TextBoard Animation */
+            currTextBoard = "../quinnectViews/icons/twitter_board.png";
 
         } else if (turnTable()==0) {
             mode = "google";
@@ -223,6 +231,9 @@ public class WidgetAnimations {
             currTransparentBigTopUrl = "../quinnectViews/icons/twitter_big_transparent.png";
             currTransparentBigMainUrl = "../quinnectViews/icons/google_big_transparent.png";
             currTransparentBigBottomUrl = "../quinnectViews/icons/youtube_big_transparent.png";
+            
+            /* TextBoard Animation */
+            currTextBoard = "../quinnectViews/icons/google_board.png";
         } else if (turnTable()==1) {
             mode = "youtube";
             currTopUrl = "../quinnectViews/icons/google_small.png";
@@ -238,6 +249,9 @@ public class WidgetAnimations {
             currTransparentBigTopUrl = "../quinnectViews/icons/google_big_transparent.png";
             currTransparentBigMainUrl = "../quinnectViews/icons/youtube_big_transparent.png";
             currTransparentBigBottomUrl = "../quinnectViews/icons/twitter_big_transparent.png";
+            
+            /* TextBoard Animation */
+            currTextBoard = "../quinnectViews/icons/youtube_board.png";
         }
         refresh();
     }
@@ -253,11 +267,14 @@ public class WidgetAnimations {
     
     private void refresh(){
         w.getTop().setVisible(false);
-        w.getTop().setVisible(true);
         w.getMain().setVisible(false);
-        w.getMain().setVisible(true);
         w.getBottom().setVisible(false);
+        w.getTextBoard().setVisible(false);
+        
+        w.getTop().setVisible(true);
+        w.getMain().setVisible(true);
         w.getBottom().setVisible(true);
+        w.getTextBoard().setVisible(true);
         w.dispose();
         w.setVisible(true);
     }
