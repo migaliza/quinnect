@@ -80,6 +80,10 @@ public class WidgetAnimations {
             public void mouseDragged(MouseEvent e) {
                 if (e.getSource() == w.getMain()) {
                     w.setLocation(w.xPos(), w.yPos());
+                    w.getTextBoard().setVisible(false);
+                    w.getSearchField().setVisible(false);
+                    w.getTop().setVisible(false);
+                    w.getBottom().setVisible(false);
                 } else if (e.getSource() == w.getTop()) {
                     w.setLocation(w.xPos(), w.yPos());
                 } else if (e.getSource() == w.getBottom()) {
@@ -142,6 +146,8 @@ public class WidgetAnimations {
             @Override
             public void mouseEntered(MouseEvent e) {
                 if (e.getSource() == w.getMain()) {
+                    w.getTextBoard().setVisible(true);
+                    w.getSearchField().setVisible(true);
                     w.getTop().setVisible(true);
                     w.getMain().setIcon(new javax.swing.ImageIcon(getClass().getResource(currMainUrl)));
                     w.getBottom().setVisible(true);
@@ -156,7 +162,7 @@ public class WidgetAnimations {
 
             @Override
             public void mouseExited(MouseEvent e) {
-                if (e.getSource() == w.getMain()) {
+                if (e.getSource() == w.getMain()) {                    
                     w.getTop().setVisible(false);
                     w.getMain().setIcon(new javax.swing.ImageIcon(getClass().getResource(currTransparentBigMainUrl)));
                     w.getBottom().setVisible(false);
@@ -175,6 +181,8 @@ public class WidgetAnimations {
         w.getTop().addMouseListener(mouselistener);
         w.getMain().addMouseListener(mouselistener);
         w.getBottom().addMouseListener(mouselistener);
+        w.getSearchField().addMouseListener(mouselistener);
+        w.getTextBoard().addMouseListener(mouselistener);
 
     }
 
@@ -252,6 +260,10 @@ public class WidgetAnimations {
         w.getBottom().setVisible(true);
         w.dispose();
         w.setVisible(true);
+    }
+    
+    public String getMode(){
+        return mode;
     }
 
 }

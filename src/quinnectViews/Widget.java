@@ -46,6 +46,10 @@ public class Widget extends javax.swing.JFrame {
         return searchField;
     }
     
+    public JLabel getTextBoard(){
+        return placeHolder;
+    }
+    
     int xMouse, yMouse;
     static int currPosnX,currPosnY;
     /**
@@ -61,6 +65,7 @@ public class Widget extends javax.swing.JFrame {
         topIcon = new javax.swing.JLabel();
         mainIcon = new javax.swing.JLabel();
         searchField = new javax.swing.JTextField();
+        placeHolder = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setAlwaysOnTop(true);
@@ -104,7 +109,15 @@ public class Widget extends javax.swing.JFrame {
             }
         });
         getContentPane().add(mainIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 188, 70, 70));
-        getContentPane().add(searchField, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, 240, 30));
+
+        searchField.setBackground(new java.awt.Color(66, 132, 197));
+        searchField.setFont(new java.awt.Font("Myriad Pro", 0, 14)); // NOI18N
+        searchField.setForeground(new java.awt.Color(255, 255, 255));
+        searchField.setBorder(null);
+        getContentPane().add(searchField, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 210, 160, 30));
+
+        placeHolder.setIcon(new javax.swing.ImageIcon(getClass().getResource("/quinnectViews/icons/icons-07.png"))); // NOI18N
+        getContentPane().add(placeHolder, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 200, 210, 50));
 
         setBounds(800, 800, 416, 339);
     }// </editor-fold>//GEN-END:initComponents
@@ -194,6 +207,7 @@ public class Widget extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel bottomIcon;
     private javax.swing.JLabel mainIcon;
+    private javax.swing.JLabel placeHolder;
     private javax.swing.JTextField searchField;
     private javax.swing.JLabel topIcon;
     // End of variables declaration//GEN-END:variables

@@ -24,8 +24,8 @@ public class Main {
         Widget w = new Widget();
         Models m = new Models();
         WidgetAnimations wa = new WidgetAnimations(w);
-        WidgetController wc = new WidgetController(w,m);
-        //wa.switchMode(wc);
+        WidgetController wc = new WidgetController(w,wa,m);
+        
         
         
     }
