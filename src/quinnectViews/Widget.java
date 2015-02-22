@@ -110,14 +110,14 @@ public class Widget extends javax.swing.JFrame {
         });
         getContentPane().add(mainIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 188, 70, 70));
 
-        searchField.setBackground(new java.awt.Color(66, 132, 197));
+        searchField.setBackground(new java.awt.Color(255, 255, 255));
         searchField.setFont(new java.awt.Font("Myriad Pro", 0, 14)); // NOI18N
-        searchField.setForeground(new java.awt.Color(255, 255, 255));
+        searchField.setForeground(new java.awt.Color(51, 51, 51));
         searchField.setBorder(null);
-        getContentPane().add(searchField, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 210, 160, 30));
+        getContentPane().add(searchField, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 210, 170, 20));
 
-        placeHolder.setIcon(new javax.swing.ImageIcon(getClass().getResource("/quinnectViews/icons/icons-07.png"))); // NOI18N
-        getContentPane().add(placeHolder, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 200, 210, 50));
+        placeHolder.setIcon(new javax.swing.ImageIcon(getClass().getResource("/quinnectViews/icons/google_board.png"))); // NOI18N
+        getContentPane().add(placeHolder, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 190, 240, 60));
 
         setBounds(800, 800, 416, 339);
     }// </editor-fold>//GEN-END:initComponents
