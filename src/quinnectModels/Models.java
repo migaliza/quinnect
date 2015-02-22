@@ -7,14 +7,8 @@ package quinnectModels;
 
 /**
  *
- * @author Prophet
+ * @author MIGALIZA
  */
 public class Models {
-    
-    
-    
-    
-    public Models(){
-    }
     
 }

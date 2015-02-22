@@ -17,7 +17,7 @@ public class WebBrowser {
     
     /* helper method that determines whether a the passed string is a 
     text or website*/
-    private boolean isWebsite(String text){
+    public boolean isWebsite(String text){
         if(text.contains("."))
             return true;
         else
@@ -28,11 +28,10 @@ public class WebBrowser {
     
     public String  urlReturned(String text){
         if(isWebsite(text))
-            return "www."+text;
+            return "http://www."+text;
         else
             return null;
-            
-      
+
     }
     public static void main(String[]args){
         WebBrowser a =  new WebBrowser();
