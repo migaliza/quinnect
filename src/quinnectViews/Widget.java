@@ -6,6 +6,7 @@
 package quinnectViews;
 
 import javax.swing.JLabel;
+import javax.swing.JTextField;
 
 /**
  *
@@ -25,12 +26,28 @@ public class Widget extends javax.swing.JFrame {
         return mainIcon;
     }
     
+    public JLabel getTop(){
+        return topIcon;
+    }
+    
+    public JLabel getBottom(){
+        return bottomIcon;
+    }
+    
     public static int xPos(){
         return currPosnX;
     }
     
     public static int yPos(){
         return currPosnY;
+    }
+    
+    public JTextField getSearchField(){
+        return searchField;
+    }
+    
+    public JLabel getTextBoard(){
+        return placeHolder;
     }
     
     int xMouse, yMouse;
@@ -44,12 +61,43 @@ public class Widget extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        bottomIcon = new javax.swing.JLabel();
+        topIcon = new javax.swing.JLabel();
         mainIcon = new javax.swing.JLabel();
+        searchField = new javax.swing.JTextField();
+        placeHolder = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setAlwaysOnTop(true);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        mainIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/quinnectViews/icons/db_on.png"))); // NOI18N
+        bottomIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/quinnectViews/icons/youtube_small_transparent.png"))); // NOI18N
+        bottomIcon.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                bottomIconMouseDragged(evt);
+            }
+        });
+        bottomIcon.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                bottomIconMousePressed(evt);
+            }
+        });
+        getContentPane().add(bottomIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 240, -1, 60));
+
+        topIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/quinnectViews/icons/twitter_small_transparent.png"))); // NOI18N
+        topIcon.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                topIconMouseDragged(evt);
+            }
+        });
+        topIcon.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                topIconMousePressed(evt);
+            }
+        });
+        getContentPane().add(topIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 150, -1, 60));
+
+        mainIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/quinnectViews/icons/google_big.png"))); // NOI18N
         mainIcon.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
                 mainIconMouseDragged(evt);
@@ -60,26 +108,49 @@ public class Widget extends javax.swing.JFrame {
                 mainIconMousePressed(evt);
             }
         });
+        getContentPane().add(mainIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 188, 70, 70));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(275, Short.MAX_VALUE)
-                .addComponent(mainIcon)
-                .addGap(65, 65, 65))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(166, Short.MAX_VALUE)
-                .addComponent(mainIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(60, 60, 60))
-        );
+        searchField.setBackground(new java.awt.Color(66, 132, 197));
+        searchField.setFont(new java.awt.Font("Myriad Pro", 0, 14)); // NOI18N
+        searchField.setForeground(new java.awt.Color(255, 255, 255));
+        searchField.setBorder(null);
+        getContentPane().add(searchField, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 210, 160, 30));
+
+        placeHolder.setIcon(new javax.swing.ImageIcon(getClass().getResource("/quinnectViews/icons/icons-07.png"))); // NOI18N
+        getContentPane().add(placeHolder, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 200, 210, 50));
 
         setBounds(800, 800, 416, 339);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void bottomIconMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bottomIconMouseDragged
+        // TODO add your handling code here:
+        int x = evt.getXOnScreen();
+        int y = evt.getYOnScreen();
+        this.setLocation(x - xMouse, y - yMouse);        
+        currPosnX = (x - xMouse);
+        currPosnY = (y - yMouse);
+    }//GEN-LAST:event_bottomIconMouseDragged
+
+    private void bottomIconMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bottomIconMousePressed
+        // TODO add your handling code here:
+        xMouse = evt.getX() + 330;
+        yMouse = evt.getY() + 250;        
+    }//GEN-LAST:event_bottomIconMousePressed
+
+    private void topIconMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_topIconMouseDragged
+        // TODO add your handling code here:
+        int x = evt.getXOnScreen();
+        int y = evt.getYOnScreen();
+        this.setLocation(x - xMouse, y - yMouse);        
+        currPosnX = (x - xMouse);
+        currPosnY = (y - yMouse);
+    }//GEN-LAST:event_topIconMouseDragged
+
+    private void topIconMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_topIconMousePressed
+        // TODO add your handling code here:
+        xMouse = evt.getX() + 330;
+        yMouse = evt.getY() + 150;
+    }//GEN-LAST:event_topIconMousePressed
 
     private void mainIconMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mainIconMouseDragged
         // TODO add your handling code here:
@@ -92,8 +163,8 @@ public class Widget extends javax.swing.JFrame {
 
     private void mainIconMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mainIconMousePressed
         // TODO add your handling code here:
-        xMouse = evt.getX() + 5;
-        yMouse = evt.getY() + 5;
+        xMouse = evt.getX() + 285;
+        yMouse = evt.getY() + 200;
     }//GEN-LAST:event_mainIconMousePressed
 
     /**
@@ -134,6 +205,10 @@ public class Widget extends javax.swing.JFrame {
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel bottomIcon;
     private javax.swing.JLabel mainIcon;
+    private javax.swing.JLabel placeHolder;
+    private javax.swing.JTextField searchField;
+    private javax.swing.JLabel topIcon;
     // End of variables declaration//GEN-END:variables
 }
