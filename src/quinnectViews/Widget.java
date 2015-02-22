@@ -66,7 +66,7 @@ public class Widget extends javax.swing.JFrame {
         setAlwaysOnTop(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        bottomIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/quinnectViews/icons/youtube_small - transparent.png"))); // NOI18N
+        bottomIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/quinnectViews/icons/youtube_small_transparent.png"))); // NOI18N
         bottomIcon.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
                 bottomIconMouseDragged(evt);
@@ -77,9 +77,9 @@ public class Widget extends javax.swing.JFrame {
                 bottomIconMousePressed(evt);
             }
         });
-        getContentPane().add(bottomIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 250, -1, 50));
+        getContentPane().add(bottomIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 240, -1, 60));
 
-        topIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/quinnectViews/icons/twitter_small - transparent.png"))); // NOI18N
+        topIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/quinnectViews/icons/twitter_small_transparent.png"))); // NOI18N
         topIcon.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
                 topIconMouseDragged(evt);
@@ -90,7 +90,7 @@ public class Widget extends javax.swing.JFrame {
                 topIconMousePressed(evt);
             }
         });
-        getContentPane().add(topIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 160, -1, 52));
+        getContentPane().add(topIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 150, -1, 60));
 
         mainIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/quinnectViews/icons/google_big.png"))); // NOI18N
         mainIcon.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -103,8 +103,8 @@ public class Widget extends javax.swing.JFrame {
                 mainIconMousePressed(evt);
             }
         });
-        getContentPane().add(mainIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 190, -1, 80));
-        getContentPane().add(searchField, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 219, 240, 30));
+        getContentPane().add(mainIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 188, 70, 70));
+        getContentPane().add(searchField, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, 240, 30));
 
         setBounds(800, 800, 416, 339);
     }// </editor-fold>//GEN-END:initComponents

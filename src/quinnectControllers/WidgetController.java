@@ -44,7 +44,7 @@ public class WidgetController {
 
             @Override
             public void keyTyped(KeyEvent e) {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                
             }
 
             @Override
@@ -60,7 +60,7 @@ public class WidgetController {
 
             @Override
             public void keyReleased(KeyEvent e) {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                
             }
         };
 
@@ -68,33 +68,27 @@ public class WidgetController {
 
             @Override
             public void mouseClicked(MouseEvent e) {
-                if (e.getSource() == w.getTop()) {
-                    mode = "twitter";
-                }else if(e.getSource() == w.getMain()){
-                    mode = "google";
-                }else{
-                    mode = "youtube";
-                }
+                
             }
 
             @Override
             public void mousePressed(MouseEvent e) {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+               
             }
 
             @Override
             public void mouseReleased(MouseEvent e) {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                
             }
 
             @Override
             public void mouseEntered(MouseEvent e) {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                
             }
 
             @Override
             public void mouseExited(MouseEvent e) {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                
             }
         };
         /**
@@ -128,12 +122,6 @@ public class WidgetController {
         return  words.replaceAll(" ","+");
     }
      
-     /**
-      * Check the current state
-      * @return 
-      */
-     public String getMode(){
-         return mode;
-     }
+     
 
 }
