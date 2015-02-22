@@ -106,6 +106,8 @@ public class WidgetAnimations {
         w.getTop().setVisible(false);
         w.getMain().setIcon(new javax.swing.ImageIcon(getClass().getResource(currTransparentBigMainUrl)));
         w.getTextBoard().setIcon(new javax.swing.ImageIcon(getClass().getResource(currTextBoard)));
+        w.getTextBoard().setVisible(false);
+        w.getSearchField().setVisible(false);
         w.getBottom().setVisible(false);
         mouselistener = new MouseListener() {
 
@@ -116,6 +118,8 @@ public class WidgetAnimations {
                     switchMode();
                 } else if (e.getSource() == w.getMain()) {
                     switchMode();
+                    w.getTextBoard().setVisible(true);
+                    w.getSearchField().setVisible(true);
                 } else if (e.getSource() == w.getBottom()) {
                     switchMode();
                 }
